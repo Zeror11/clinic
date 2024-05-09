@@ -1,0 +1,148 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('logo.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background photo */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 520px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffffae;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex; /* Display form groups in a flex layout */
+    align-items: center; /* Align items vertically */
+}
+
+
+button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #ff9800;
+}
+
+
+/*ICO*/
+.input-group {
+    position: relative;
+}
+
+.input-group input[type="name"],
+.input-group input[type="Civil Status"],
+.input-group input[type="number"],
+.input-group input[type="tel"] {
+    flex: 1;
+    padding: 10px 25px 10px 45px; /* Adjust padding to create space for the icon */
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Add margin to the right of input elements */
+    border-radius: 5px;
+
+}
+
+.input-group i {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 10px; /* Adjust the position of the icon */
+    color: #aaa; /* Adjust icon color */
+
+}
+/* Adjust padding and margin for select input */
+.input-group select {
+    flex: 1;
+    padding: 10px 21rem 10px 30px; /* Adjust padding to create space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin to the bottom of select input */
+}
+
+/* Adjust padding and margin for record medical input */
+.input-group input[type="text"] {
+    flex: 1;
+    padding: 10px 18rem 10px 30px; /* Adjust padding to create space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin to the bottom of email input */
+}
+
+/*radito button*/
+.radio {
+    margin-bottom: 10px;
+  }
+  
+  .radio label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+  }
+  
+  .input-group {
+    display: flex;
+  }
+  
+  .input-group input[type="radio"] {
+    margin-top: 1px;
+    margin-right: 10px;
+
+}
+  
+  .input-group label {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .input-group input[type="radio"]:checked + label:before {
+    background-color: #505050;
+  }
+  
+
+  /*submit*/
+
+  .next {
+    margin-top: 20px;
+  }
+  
+  .next button {
+    padding: 10px 20px;
+    background-color: #40ce50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .next button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Add more styles as needed */
+  

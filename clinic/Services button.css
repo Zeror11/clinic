@@ -1,0 +1,94 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('logo.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background photo */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(102, 189, 121);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Styles for the container */
+.patient-choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Adjust the maximum width of the container */
+    padding: 20px;
+    background-color: #f0ebeb; /* Set the background color of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Styles for the patient choice buttons */
+.patient-choice {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.patient-choice:hover {
+    transform: scale(1.1);
+}
+
+.patient-choice img {
+    width: 100px; /* Adjust the size of the image as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30%; /* Make the image circular */
+}
+
+.patient-choice span {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333; /* Set the color of the text */
+}
+
+
+/*button submit*/
+#arrowButton {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    outline: none; /* Remove outline */
+    margin-top: 10px;
+  }

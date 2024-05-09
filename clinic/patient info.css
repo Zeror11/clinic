@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*table*/
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    transition: max-height 0.5s ease; /* Add transition for animation */
+    text-align: center; /* Center the button horizontally */
+}
+
+.table-content {
+    max-height: 300px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Add vertical scrollbar */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*form*/
+.container {
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #add7ac;
+    overflow: hidden; /* Clearfix */
+}
+
+h2 {
+    text-align: center;
+}
+
+.left-section,
+.right-section {
+    width: 45%;
+    float: left;
+}
+
+.left-section {
+    margin-right: 5%;
+}
+
+.right-section {
+    margin-left: 5%;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.gender input[type="radio"] {
+    display: none;
+}
+
+.gender label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.gender label::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.gender input[type="radio"]:checked + label::before {
+    background-color: #333;
+}
+
+/* Button Styles */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Additional Button Styles */
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #286090;
+}
+
+.toggle-button {
+    background-color: #45a049; /* Darker green on hover */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 10px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    transition-duration: 0.4s; /* Transition duration */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 10px; /* Rounded corners */
+
+}
+
+.toggle-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+.button-container {
+    position: fixed;
+    top: 50%; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.edit-btn, .delete-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+.delete-btn {
+    background-color: #f44336; /* Red */
+}
+
+.delete-btn:hover {
+    background-color: #da190b; /* Darker Red */
+}
+
+
+.refresh-button button {
+    background-color: #45a049; /* Darker green on hover */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* White text */
+    padding: 8px 16px; /* Add padding to the buttons */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 10px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    transition-duration: 0.4s; /* Transition duration */
+    cursor: pointer; /* Cursor pointer */
+}
+
+.refresh-button button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.search-bar {
+    margin-top: 10px;
+    text-align: center; /* Center the search bar */
+}
+
+.search-bar input[type='text'] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}

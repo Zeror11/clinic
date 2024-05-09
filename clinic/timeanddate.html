@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="timeanddate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment</h1>
+        <form action="time&date.php" method="POST">
+            <div class="appointment-info">
+                <div class="date-time">
+                    <label for="appointment_date">Appointment Date:</label>
+                    <input type="date" id="Date" name="Date">
+                </div>
+                <div class="date-time">
+                    <label for="appointment_time">Appointment Time:</label>
+                    <input type="time" id="Time" name="Time" required>
+                </div>
+            </div>
+            <div class="calendar-container">
+                <div id="calendar"></div>
+            </div>
+            <div class="next">
+                <button type="submit" name="submit">Submit</button>
+            </div>
+        </form>
+    </div>            
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const calendar = document.getElementById('calendar');
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+    const currentDay = currentDate.getDate();
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    const renderCalendar = (year, month) => {
+        const firstDayOfMonth = new Date(year, month, 1);
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const startingDay = firstDayOfMonth.getDay();
+
+        let html = `<div class="calendar-header">${months[month]} ${year}</div>`;
+        html += '<table class="calendar-table">';
+        html += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
+        
+        let day = 1;
+        for (let i = 0; i < 6; i++) {
+            html += '<tr>';
+            for (let j = 0; j < 7; j++) {
+                if (i === 0 && j < startingDay) {
+                    html += '<td></td>';
+                } else if (day > daysInMonth) {
+                    break;
+                } else {
+                    const isToday = day === currentDay && month === currentMonth && year === currentYear;
+                    html += `<td class="calendar-day${isToday ? ' today' : ''}">${day}</td>`;
+                    day++;
+                }
+            }
+            html += '</tr>';
+            if (day > daysInMonth) {
+                break;
+            }
+        }
+        
+        html += '</table>';
+        calendar.innerHTML = html;
+
+        // Add event listeners to each day
+        const calendarDays = document.querySelectorAll('.calendar-day');
+        calendarDays.forEach(dayElement => {
+            dayElement.addEventListener('click', () => {
+                // Handle click event for the day
+                alert(`Clicked on ${months[month]} ${dayElement.textContent}, ${year}`);
+            });
+        });
+    };
+
+    renderCalendar(currentYear, currentMonth);
+});
+
+</script>
+</html>

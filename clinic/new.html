@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <link rel="Website icon" type="image/x-icon" href="Denture.ico"><!-- ico on the top -->
+    <link rel="stylesheet" href="new.css"><!-- ccs files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!-- ico -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> <!-- Include SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Include SweetAlert JS -->
+
+
+ </head>
+        <body>
+            <div class="container">
+                <h1>Patient Profile</h1>
+                <form action="process_patient_form.php" method="POST"> <!-- php connected file -->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i> <!-- Icon for full name -->
+
+                            <input type="name" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-calendar-alt"></i> <!-- Icon for age -->
+
+                            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                        </div>
+                    </div>
+
+                    <div class="radio">
+                        <label>Gender:</label><br>
+                        <div class="input-group">
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                    
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                    
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                    
+
+                 
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <i class="fa fa-phone"></i> <!-- Icon for Phone -->
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa fa-envelope"></i> <!-- Icon for Email -->
+                            <input type="Civil Status" id="Civil Status" name="Civil Status" placeholder="Enter your Civil Status" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" id="Occupation" name="Occupation" placeholder="Enter Occupation" required>
+                            <i class="fa fa-file-medical"></i> <!-- Icon for Medical Record -->
+                        </div>
+                    </div>
+                    
+                  <!-- Other fields can be added here as needed -->
+                  <div class="next">
+                    <button id="proceedBtn" type="submit" name="next">Proceed</button>
+                  </div>
+            </form>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Include SweetAlert JS -->
+
+
+<script>
+    document.getElementById('proceedBtn').addEventListener('click', function() {
+        // Check if the form is filled up or not
+        var isFormFilled = validateForm(); // Call your form validation function here
+    
+        if (isFormFilled) {
+            // If form is filled up, show SweetAlert message and proceed
+            Swal.fire({
+                icon: 'success',
+                title: 'Submitted',
+                showConfirmButton: false,
+                timer: 1300, // Time in milliseconds - Adjusted for longer duration
+                willClose: () => {
+                    // Redirect to the next page after the alert is closed
+                    window.location.href = 'Services button.html';
+                }
+            });
+        } else {
+            // If form is not filled up, show error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Form not filled up!',
+                text: 'Please fill up the form before proceeding.'
+            });
+        }
+    });
+    
+    // Function to validate the form
+    function validateForm() {
+        // Your form validation logic here
+        // For example, check if required fields are filled
+        var isValid = true; // Placeholder for form validation result
+        // Example validation logic:
+        var requiredInputs = document.querySelectorAll('input[required]');
+        requiredInputs.forEach(function(input) {
+            if (!input.value.trim()) {
+                isValid = false;
+                return;
+            }
+        });
+        return isValid;
+    }
+    </script>
+    
+
+    </body>
+</html>

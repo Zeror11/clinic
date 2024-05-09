@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.ico" alt="Dental Clinic Logo">
+                    <h1>Dental Clinic</h1>
+                </div>
+                
+                 <!-- Sidebar button (visible on small screens only) -->
+                 <button class="openbtn" onclick="toggleNav()">&#9776;</button>
+
+                 <!-- Container for navigation links (hidden on small screens) -->
+                 <div class="nav-container" id="myNav">
+                         
+                  <!-- Close button -->
+                  <button class="closebtn" onclick="closeNav()">×</button>
+
+                    <!-- Header navigation (visible on large screens) -->
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a href="main_page.html">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#services-section">Services <span class="dropdown-arrow">▼</span></a>
+                                <div class="dropdown-content">
+                                    <a href="Orthodontics.html">Orthodontics</a>
+                                    <a href="Tooth colored.html">Tooth colored</a>
+                                    <a href="Tooth Extraction.html">Tooth Extraction</a>
+                                    <a href="Dentures.html">Dentures</a>
+                                    <a href="Oral Prophylaxis.html">Oral Prophylaxis(cleaning)</a>
+                                </div>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <!-- Appointment link within the sidebar -->
+                            <li class="appointment-link"><a href="index.html" class="highlight">Book an Appointment</a></li>
+                            </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+            <!-- Main content goes here -->
+            <div class="container2">
+                <form id="appointment_form" method="post">
+                    <h2>Book Appointment</h2>
+                    <div id="content">
+                        <p>Is this your FIRST TIME with Smile A Lot Dental?*</p>
+                    </div>
+                    <a href="Services button.html"><button type="button">No, I am a Old Patient</button></a>
+                    <br>
+                    <a href="new.html"><button type="button">Yes, I am a New Patient</button></a>
+                </form>
+            </div>
+            
+
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2024 My Website. All rights reserved.</p>
+            </div>
+    </footer>
+    
+
+     <!-- JavaScript for Slider and Sidebar -->
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            const visibleSlides = 3; // Number of slides to show at a time
+            let currentSlide = 0;
+    
+            function showSlides(startIndex) {
+                slides.forEach((slide, index) => {
+                    if (index >= startIndex && index < startIndex + visibleSlides) {
+                        slide.style.display = 'block';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+            }
+    
+            function nextSlides() {
+                currentSlide = (currentSlide + visibleSlides) % totalSlides;
+                showSlides(currentSlide);
+            }
+    
+            function prevSlides() {
+                currentSlide = (currentSlide - visibleSlides + totalSlides) % totalSlides;
+                showSlides(currentSlide);
+            }
+    
+            document.getElementById('nextBtn').addEventListener('click', nextSlides);
+            document.getElementById('prevBtn').addEventListener('click', prevSlides);
+    
+            showSlides(currentSlide);
+        });
+    
+        document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("nav ul li a");
+        const currentUrl = window.location.href;
+    
+        links.forEach(function(link) {
+            // Check if the link's href matches the current URL
+            if (link.href === currentUrl) {
+                link.classList.add("active");
+            }
+    
+            // Add click event listener to each link
+            link.addEventListener("click", function(event) {
+                // Remove active class from all links
+                links.forEach(function(link) {
+                    link.classList.remove("active");
+                });
+    
+                // Add active class to the clicked link
+                this.classList.add("active");
+            });
+        });
+    });
+        
+          // Function to toggle the visibility of the menu bar and control button visibility
+            function toggleNav() {
+                var navContainer = document.querySelector('.nav-container');
+                var body = document.querySelector('body');
+                var openBtn = document.querySelector('.openbtn');
+                var closeBtn = document.querySelector('.closebtn');
+        
+                if (navContainer.style.left === '0px') {
+                    navContainer.style.left = '-250px';
+                    body.style.overflow = 'auto'; // Re-enable scrolling
+                    openBtn.style.display = 'block'; // Show the menu button
+                    closeBtn.style.display = 'none'; // Hide the close button
+                } else {
+                    navContainer.style.left = '0px';
+                    body.style.overflow = 'hidden'; // Disable scrolling
+                    openBtn.style.display = 'none'; // Hide the menu button
+                    closeBtn.style.display = 'block'; // Show the close button
+                }
+            }
+        
+            // Function to close the navigation container and re-enable scrolling
+            function closeNav() {
+                var navContainer = document.querySelector('.nav-container');
+                var body = document.querySelector('body');
+                var openBtn = document.querySelector('.openbtn');
+                var closeBtn = document.querySelector('.closebtn');
+        
+                navContainer.style.left = '-250px';
+                body.style.overflow = 'auto'; // Re-enable scrolling
+                openBtn.style.display = 'block'; // Show the menu button
+                closeBtn.style.display = 'none'; // Hide the close button
+            }
+    </script>
+    
+        <!-- End of JavaScript for Slider and Sidebar -->
+</body>
+</html>

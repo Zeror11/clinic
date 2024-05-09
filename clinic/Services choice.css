@@ -1,0 +1,510 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4; /* Set your desired background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.container1 {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Display menu items in a row */
+    margin-left: 10px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px; /* Add padding to menu items */
+}
+
+nav ul li a:hover {
+    background-color: #ffffff; /* Change background color on hover */
+}
+
+nav ul li a.active {
+    color: red;
+}
+
+
+/* Style for the active link */
+.highlight {
+    color: #000000; /* Change the color to highlight the link */
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #000000; /* Add a red border to highlight the active link */
+    border-radius: 5px; /* Optional: Add rounded corners to the border */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cec3c3; /* Change dropdown background color */
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for better visibility */
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cec3c3; /* Change dropdown background color */
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for better visibility */
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media query for header and menu bar  (up to 600px) */
+@media screen and (max-width: 768px) {
+    .header-nav {
+        display: block;
+    }
+
+/* Navigation Styles */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Transparent background */
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure it appears above other content */
+    display: flex;
+    flex-direction: column; /* Organize content vertically */
+}
+
+
+/* Menu Items */
+.nav-container ul {
+    padding: 0;
+    list-style-type: none; /* Remove default list style */
+    text-align: center; /* Center align menu items */
+}
+
+.nav-container ul li {
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center; /* Center align menu items */
+    position: relative; /* Position the arrow relative to the list item */
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px; /* Adjust font size as needed */
+    display: block; /* Ensure each item is on a separate line */
+}
+
+.nav-container ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Adjust the position of the dropdown content */
+.nav-container ul li .dropdown-content {
+    position: absolute;
+    top: 100%; /* Position it below the parent list item */
+    left: 50%; /* Center align the dropdown content */
+    transform: translateX(-50%); /* Center align horizontally */
+    display: none; /* Hide the dropdown content by default */
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+/* Show the dropdown content when the parent list item is hovered */
+.nav-container ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Logo Styles */
+.logo {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.logo img {
+    width: 40px;
+    max-width: 40px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.logo h1 {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+/* open button styles */
+.openbtn {
+    display: block;
+    position: fixed;
+    top: 25px;
+    left: 15px;
+    z-index: 9999;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+}
+
+/* Close button styles */
+.closebtn {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+.closebtn:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 700px) {
+    /* Hide the sidebar button for larger screens */
+    .openbtn {
+        display: none;
+    }
+
+    .closebtn {
+        display: none;
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 25px; /* Padding */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center align content */
+    margin-top: 60px;
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+}
+
+.social-media a {
+    margin-right: 10px; /* Spacing between social media icons */
+    color: #fff; /* Icon color */
+}
+
+.social-media a:hover {
+    color: #ccc; /* Hover color for icons */
+}
+
+.footer-text {
+    text-align: center; /* Center align footer text */
+}
+
+.footer-text p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+/* Headline Section */
+.banner {
+    background-image: url('Black.ico');
+    background-size: cover;
+    padding-top: 15%;
+    padding-right: 15%;
+    padding-bottom: 15%;
+    padding-left: 20%; /* Adjust padding as needed */
+    color: #fff;
+}
+
+.banner-content {
+    text-align: center; /* Center align the content */
+}
+
+.banner-content h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    margin-left: center; /* Adjust margin-left to move the text towards the right */
+    margin-right: center; /* Adjust margin-left to move the text towards the right */
+}
+
+.banner-content p {
+    color: #fff;
+
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: center; /* Adjust margin-left to move the text towards the right */
+    margin-right: center; /* Adjust margin-left to move the text towards the right */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*description*/
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the start of the container */
+    padding: 50px 0;
+    position: relative;
+    margin-top: 50px; /* Adjust margin as needed */
+
+}
+
+.service-item {
+    display: flex;
+    width: 80%;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 89%;
+    height: auto;
+    padding-left: auto;
+    padding-right: auto;
+    box-shadow: 5px 5px 2px rgba(61, 44, 44, 0.644); /* Add shadow effect */
+}
+
+.description {
+    flex: 1;
+    padding-left: 20px;
+    margin-top: 50px; /* Adjust margin as needed */
+
+}
+
+.description p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Style for the button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for description */
+@media screen and (max-width: 768px) {
+    .service-item {
+        width: 100%; /* Adjust width for full width on small screens */
+    }
+
+    .description {
+        padding-left: 0; /* Remove left padding for small screens */
+        margin-top: 20px; /* Adjust margin for small screens */
+    }
+}
+
+
+/*column*/
+.column-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+    margin-top: 50px;
+    background-color: #b3cae4;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 20px);
+    margin: 0 10px;
+}
+
+.column .service-item {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.column .image {
+    margin-bottom: 20px; /* Add margin between image and description */
+    margin-top: 20px; /* Add margin between image and description */
+    margin-left: 10%; /* Add margin between image and description */
+    margin-right: 10px; /* Add margin between image and description */
+
+}
+
+.column .image img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 5px 5px 2px rgba(61, 44, 44, 0.644);
+}
+
+.column .description {
+    text-align: left;
+}
+
+.column .description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.column .description p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .column-wrapper {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        align-items: center; /* Center-align columns on small screens */
+    }
+
+    .column {
+        width: 90%; /* Adjust column width for better spacing on small screens */
+        margin: 20px 0; /* Adjust margin between columns for small screens */
+    }
+}

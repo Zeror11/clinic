@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooth Extractionm</title>
+    <link rel="shortcut icon" type="image/x-icon" href="tooth Extraction.ico">
+    <link rel="stylesheet" href="Services choice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.ico" alt="Dental Clinic Logo">
+                    <h1>Dental Clinic</h1>
+                </div>
+                
+                <!-- Sidebar button (visible on small screens only) -->
+                <button class="openbtn" onclick="toggleNav()">&#9776;</button>
+
+                <!-- Container for navigation links (hidden on small screens) -->
+                <div class="nav-container" id="myNav">
+                        
+                 <!-- Close button -->
+                 <button class="closebtn" onclick="closeNav()">×</button>
+
+                 <!-- Header navigation (visible on large screens) -->
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a href="main_page.html">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#services-section">Services <span class="dropdown-arrow">▼</span></a>
+                                <div class="dropdown-content">
+                                    <a href="Orthodontics.html">Orthodontics</a>
+                                    <a href="Tooth colored.html">Tooth colored</a>
+                                    <a href="Tooth Extraction.html">Tooth Extraction</a>
+                                    <a href="Dentures.html">Dentures</a>
+                                    <a href="Oral Prophylaxis.html">Oral Prophylaxis(cleaning)</a>
+                                </div>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <!-- login link within the sidebar -->
+                            <li class="login-link"><a href="index.html" class="highlight">Sign Up</a></li>
+                            <li class="login-link"><a href="Admin.html" class="highlight">Log In</a></li>                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <section class="banner">
+                <div class="banner-content">
+                    <h1>Tooth Extraction</h1>
+                </div>
+            </section>
+        </div>
+    
+
+
+        <style>
+            /* Define CSS animations for service and coloumn*/
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        
+            @keyframes fadeOutDown {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+            }
+        
+            /* Apply animation to elements */
+            .service-item {
+                animation: fadeInUp 1s ease-out;
+            }
+        
+            .service-item.fade-out {
+                animation: fadeOutDown 1s ease-out;
+            }
+        </style>
+
+        <section class="services">
+            <div class="service-item">
+                <div class="image">
+                    <img src="Black.ico" alt="tooth Extraction Image">
+                </div>
+                <div class="description">
+                    <p>Our orthodontic services include braces, clear aligners, and other advanced treatments tailored to your needs. With our experienced orthodontists and state-of-the-art facilities, we are dedicated to helping you achieve the smile you deserve.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="column-wrapper">
+            <section class="column">
+                <div class="service-item">
+                    <div class="description">
+                        <h2>Tooth Extraction</h2>
+                        <p>Periodontal probing is the complete inspection of teeth. In this step, the dentist will visually examine your teeth and gums. Once done, we will proceed in polishing and cleaning all the pockets in your teeth to remove plaque and tartar.</p>
+                    </div>
+                    <div class="image">
+                        <img src="Black.ico" alt="Periodontal Probing Image">
+                    </div>
+                </div>
+            </section>
+        
+            <section class="column">
+                <div class="service-item">
+                    <div class="image">
+                        <img src="Black.ico" alt="tooth Extraction Image">
+                    </div>
+                    <div class="description">
+                        <p>Our orthodontic services include braces, clear aligners, and other advanced treatments tailored to your needs. With our experienced orthodontists and state-of-the-art facilities, we are dedicated to helping you achieve the smile you deserve.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="column">
+                <div class="service-item">
+                    <div class="description">
+                        <p>Periodontal probing is the complete inspection of teeth. In this step, the dentist will visually examine your teeth and gums. Once done, we will proceed in polishing and cleaning all the pockets in your teeth to remove plaque and tartar.</p>
+                    </div>
+                    <div class="image">
+                        <img src="Black.ico" alt="Periodontal Probing Image">
+                    </div>
+                </div>
+            </section>
+
+            <section class="column">
+                <div class="service-item">
+                    <div class="image">
+                        <img src="Black.ico" alt="tooth Extraction Image">
+                    </div>
+                    <div class="description">
+                        <p>Our orthodontic services include braces, clear aligners, and other advanced treatments tailored to your needs. With our experienced orthodontists and state-of-the-art facilities, we are dedicated to helping you achieve the smile you deserve.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Smile A Lot. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Function to toggle the visibility of the menu bar and control button visibility
+        function toggleNav() {
+            var navContainer = document.querySelector('.nav-container');
+            var body = document.querySelector('body');
+            var openBtn = document.querySelector('.openbtn');
+            var closeBtn = document.querySelector('.closebtn');
+    
+            if (navContainer.style.left === '0px') {
+                navContainer.style.left = '-250px';
+                body.style.overflow = 'auto'; // Re-enable scrolling
+                openBtn.style.display = 'block'; // Show the menu button
+                closeBtn.style.display = 'none'; // Hide the close button
+            } else {
+                navContainer.style.left = '0px';
+                body.style.overflow = 'hidden'; // Disable scrolling
+                openBtn.style.display = 'none'; // Hide the menu button
+                closeBtn.style.display = 'block'; // Show the close button
+            }
+        }
+    
+        // Function to close the navigation container and re-enable scrolling
+        function closeNav() {
+            var navContainer = document.querySelector('.nav-container');
+            var body = document.querySelector('body');
+            var openBtn = document.querySelector('.openbtn');
+            var closeBtn = document.querySelector('.closebtn');
+    
+            navContainer.style.left = '-250px';
+            body.style.overflow = 'auto'; // Re-enable scrolling
+            openBtn.style.display = 'block'; // Show the menu button
+            closeBtn.style.display = 'none'; // Hide the close button
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav ul li a");
+    const currentUrl = window.location.href;
+
+    links.forEach(function(link) {
+        // Check if the link's href matches the current URL
+        if (link.href === currentUrl) {
+            link.classList.add("active");
+        }
+
+        // Add click event listener to each link
+        link.addEventListener("click", function(event) {
+            // Remove active class from all links
+            links.forEach(function(link) {
+                link.classList.remove("active");
+            });
+
+            // Add active class to the clicked link
+            this.classList.add("active");
+        });
+    });
+});
+    </script>
+    
+    
+    
+</body>
+</html>

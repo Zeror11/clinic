@@ -1,0 +1,141 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('logo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffffb2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px; /* Adjust the font size */
+    color: #000000; /* Set the color */
+    margin-bottom: 15px; /* Add margin at the bottom */
+}
+
+h3 {
+    font-size: 15px; /* Adjust the font size */
+    color: #000000; /* Set the color */
+    margin-bottom: 5px; /* Add margin at the bottom */
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    width: 100px;
+}
+
+#appointment_date {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 10px);
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    width: 97%;
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff9800;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input[type="name"],
+.input-group input[type="email"],
+.input-group input[type="number"],
+.input-group input[type="tel"],
+.input-group input[type="text2"],
+
+.input-group select {
+    flex: 1;
+    padding: 10px 25px 10px 30px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #aaa;
+}
+
+.input-group select {
+    padding: 10px 25px 10px 49px;
+}
+
+
+
+/* Adjust padding and margin for record medical input */
+.input-group input[type="text"] {
+    flex: 1;
+    padding: 10px 18rem 10px 30px; /* Adjust padding to create space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin to the bottom of email input */
+}
+
+.calendar-icon {
+    position: absolute;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+#birthday {
+    padding-left: 30px; /* Adjust the padding to make space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 32px;
+    width: 15rem;
+    font-size: 10px;
+    text-align: center;
+}
+
+.input-group input {
+    margin-right: 10px; /* Adjust the margin between the textboxes */
+}

@@ -1,0 +1,188 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+header {
+    background-color: #333; /* Change to the desired color */
+    color: #f9fdfd;
+    padding: 20px 30px; /* Adjust padding as needed */
+    position: relative; /* Add position:relative to ensure proper stacking of elements */
+}
+
+.container1 {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    width: 40px; /* Adjust logo size as needed */
+    height: auto;
+    margin-right: 10px; /* Add some spacing between logo and text */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px; /* Add spacing between menu items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove margin from the first menu item */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 25px; /* Padding */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center align content */
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+}
+
+.social-media a {
+    margin-right: 10px; /* Spacing between social media icons */
+    color: #fff; /* Icon color */
+}
+
+.social-media a:hover {
+    color: #ccc; /* Hover color for icons */
+}
+
+.footer-text {
+    text-align: center; /* Center align footer text */
+}
+
+.footer-text p {
+    margin: 0; /* Remove default margin */
+}
+
+
+/* Menu Button Styles */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.openbtn:hover {
+    background-color: #333;
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.log {
+    text-align: center;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.log img {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+}
+
+.logo h1 {
+    margin: 5px 0;
+}
+
+.logo p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.login-form {
+    max-width: 300px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    text-align: left; /* Center the text within the input */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}

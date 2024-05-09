@@ -1,0 +1,451 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4; /* Set your desired background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.container1 {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Display menu items in a row */
+    margin-left: 10px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px; /* Add padding to menu items */
+}
+
+nav ul li a:hover {
+    background-color: #ffffff; /* Change background color on hover */
+}
+
+nav ul li a.active {
+    color: red;
+}
+
+
+/* Style for the active link */
+.highlight {
+    color: #000000; /* Change the color to highlight the link */
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #000000; /* Add a red border to highlight the active link */
+    border-radius: 5px; /* Optional: Add rounded corners to the border */
+}
+
+/* Dropdown Button */
+.dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cec3c3; /* Change dropdown background color */
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for better visibility */
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cec3c3; /* Change dropdown background color */
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for better visibility */
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f2f2f2; /* Change background color on hover */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media query for header and menu bar  (up to 600px) */
+@media screen and (max-width: 768px) {
+    .header-nav {
+        display: block;
+    }
+
+/* Navigation Styles */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Transparent background */
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure it appears above other content */
+    display: flex;
+    flex-direction: column; /* Organize content vertically */
+}
+
+
+/* Menu Items */
+.nav-container ul {
+    padding: 0;
+    list-style-type: none; /* Remove default list style */
+    text-align: center; /* Center align menu items */
+}
+
+.nav-container ul li {
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center; /* Center align menu items */
+    position: relative; /* Position the arrow relative to the list item */
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px; /* Adjust font size as needed */
+    display: block; /* Ensure each item is on a separate line */
+}
+
+.nav-container ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Adjust the position of the dropdown content */
+.nav-container ul li .dropdown-content {
+    position: absolute;
+    top: 100%; /* Position it below the parent list item */
+    left: 50%; /* Center align the dropdown content */
+    transform: translateX(-50%); /* Center align horizontally */
+    display: none; /* Hide the dropdown content by default */
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+/* Show the dropdown content when the parent list item is hovered */
+.nav-container ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Logo Styles */
+.logo {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.logo img {
+    width: 40px;
+    max-width: 40px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.logo h1 {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+/* open button styles */
+.openbtn {
+    display: block;
+    position: fixed;
+    top: 25px;
+    left: 15px;
+    z-index: 9999;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+}
+
+/* Close button styles */
+.closebtn {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+.closebtn:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 700px) {
+    /* Hide the sidebar button for larger screens */
+    .openbtn {
+        display: none;
+    }
+
+    .closebtn {
+        display: none;
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 25px; /* Padding */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center align content */
+    margin-top: 60px;
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+}
+
+.social-media a {
+    margin-right: 10px; /* Spacing between social media icons */
+    color: #fff; /* Icon color */
+}
+
+.social-media a:hover {
+    color: #ccc; /* Hover color for icons */
+}
+
+.footer-text {
+    text-align: center; /* Center align footer text */
+}
+
+.footer-text p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+/* Headline Section */
+.banner {
+    background-image: url('Black.ico');
+    background-size: cover;
+    padding-top: 15%;
+    padding-right: 15%;
+    padding-bottom: 15%;
+    padding-left: 20%; /* Adjust padding as needed */
+    color: #fff;
+}
+
+.banner-content {
+    text-align: center; /* Center align the content */
+}
+
+.banner-content h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    margin-left: center; /* Adjust margin-left to move the text towards the right */
+    margin-right: center; /* Adjust margin-left to move the text towards the right */
+}
+
+.banner-content p {
+    color: #fff;
+
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: center; /* Adjust margin-left to move the text towards the right */
+    margin-right: center; /* Adjust margin-left to move the text towards the right */
+}
+
+
+
+
+
+/* Main content goes here */
+
+/* contact.css */
+
+.contact_container {
+    padding: 20px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* spaces of footer */
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin-bottom: 20px; /* Add space below the input fields */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Media query for small screens */
+@media screen and (max-width: 1000px) {
+    .contact_container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-info h1 {
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 8px; /* Decrease padding for smaller screens */
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px; /* Decrease padding for smaller screens */
+    }
+}
